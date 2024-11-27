@@ -20,10 +20,11 @@
 
     <properties>
         <pihcoreVersion>${project.parent.version}</pihcoreVersion>
-        <openmrsConfigArtifact>openmrs-config-zl</openmrsConfigArtifact>
-        <openmrsConfigVersion>1.55.0-SNAPSHOT</openmrsConfigVersion>
-        <openmrsFrontendArtifact>openmrs-frontend-zl</openmrsFrontendArtifact>
-        <openmrsFrontendVersion>1.3.0</openmrsFrontendVersion>
+        <pihemrVersion>2.0.0-SNAPSHOT</pihemrVersion>
+        <configVersion>1.55.0-SNAPSHOT</configVersion>
+        <frontendArtifact>openmrs-frontend-zl</frontendArtifact>
+        <frontendVersion>1.3.0</frontendVersion>
+        <sdkVersion>6.1.0-SNAPSHOT</sdkVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -44,34 +45,26 @@
         <url>https://github.com/PIH/openmrs-distro-zl</url>
     </scm>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/public</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>openmrs-repo</id>
-            <name>OpenMRS Nexus Repository</name>
-            <url>https://openmrs.jfrog.io/artifactory/public</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.openmrs.distro</groupId>
+            <artifactId>pihemr</artifactId>
+            <version>${pihemrVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.pih.openmrs</groupId>
+            <artifactId>openmrs-config-zl</artifactId>
+            <version>${configVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.pih.openmrs</groupId>
+            <artifactId>${frontendArtifact}</artifactId>
+            <version>${frontendVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <pluginManagement>
@@ -79,7 +72,15 @@
                 <plugin>
                     <groupId>org.openmrs.maven.plugins</groupId>
                     <artifactId>openmrs-sdk-maven-plugin</artifactId>
-                    <version>6.1.0-SNAPSHOT</version>
+                    <version>${sdkVersion}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>2.16.0</version>
+                    <configuration>
+                        <generateBackupPoms>false</generateBackupPoms>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -201,5 +202,34 @@
             </build>
         </profile>
     </profiles>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/public</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>openmrs-repo</id>
+            <name>OpenMRS Nexus Repository</name>
+            <url>https://openmrs.jfrog.io/artifactory/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>
