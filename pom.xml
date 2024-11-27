@@ -3,14 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.openmrs.module</groupId>
-        <artifactId>pihcore</artifactId>
-        <version>2.0.0-SNAPSHOT</version>
-    </parent>
-
-    <groupId>org.pih.openmrs</groupId>
-    <artifactId>openmrs-distro-zl</artifactId>
+    <groupId>org.pih.openmrs.distro</groupId>
+    <artifactId>zlemr</artifactId>
     <version>1.0.0-SNAPSHOT</version>  <!-- Should this mirror the config version?  If so, that might argue for having one be a submodule of the other -->
     <packaging>jar</packaging>
 
@@ -19,7 +13,6 @@
     <url>https://github.com/PIH/openmrs-distro-zl</url>
 
     <properties>
-        <pihcoreVersion>${project.parent.version}</pihcoreVersion>
         <pihemrVersion>2.0.0-SNAPSHOT</pihemrVersion>
         <configVersion>1.55.0-SNAPSHOT</configVersion>
         <frontendArtifact>openmrs-frontend-zl</frontendArtifact>
