@@ -13,10 +13,18 @@
     <url>https://github.com/PIH/openmrs-distro-zl</url>
 
     <properties>
-        <pihemrVersion>2.0.0-SNAPSHOT</pihemrVersion>
+        <configGroup>org.pih.openmrs</configGroup>
+        <configArtifact>openmrs-config-zl</configArtifact>
         <configVersion>1.55.0-SNAPSHOT</configVersion>
+        <configType>zip</configType>
+        <frontendGroup>org.pih.openmrs</frontendGroup>
         <frontendArtifact>openmrs-frontend-zl</frontendArtifact>
         <frontendVersion>1.3.0</frontendVersion>
+        <frontendType>zip</frontendType>
+        <parentGroup>org.openmrs.distro</parentGroup>
+        <parentArtifact>pihemr</parentArtifact>
+        <parentVersion>2.0.0-SNAPSHOT</parentVersion>
+        <parentType>jar</parentType>
         <sdkVersion>6.1.0-SNAPSHOT</sdkVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -40,23 +48,24 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.openmrs.distro</groupId>
-            <artifactId>pihemr</artifactId>
-            <version>${pihemrVersion}</version>
+            <groupId>${parentGroup}</groupId>
+            <artifactId>${parentArtifact}</artifactId>
+            <version>${parentVersion}</version>
+            <type>${parentType}</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.pih.openmrs</groupId>
-            <artifactId>openmrs-config-zl</artifactId>
+            <groupId>${configGroup}</groupId>
+            <artifactId>${configArtifact}</artifactId>
             <version>${configVersion}</version>
-            <type>zip</type>
+            <type>${configType}</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.pih.openmrs</groupId>
+            <groupId>${frontendGroup}</groupId>
             <artifactId>${frontendArtifact}</artifactId>
             <version>${frontendVersion}</version>
-            <type>zip</type>
+            <type>${frontendType}</type>
             <scope>provided</scope>
         </dependency>
     </dependencies>
