@@ -13,10 +13,9 @@
     <url>https://github.com/PIH/openmrs-distro-zl</url>
 
     <properties>
-        <configGroup>org.pih.openmrs</configGroup>
-        <configArtifact>openmrs-config-zl</configArtifact>
-        <configVersion>1.55.0-SNAPSHOT</configVersion>
-        <configType>zip</configType>
+        <contentGroup>org.pih.openmrs.content</contentGroup>
+        <contentArtifact>zl</contentArtifact>
+        <contentVersion>1.56.0-SNAPSHOT</contentVersion>
         <frontendGroup>org.pih.openmrs</frontendGroup>
         <frontendArtifact>openmrs-frontend-zl</frontendArtifact>
         <frontendVersion>1.3.0</frontendVersion>
