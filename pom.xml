@@ -23,7 +23,7 @@
         <frontendType>zip</frontendType>
         <parentGroup>org.openmrs.distro</parentGroup>
         <parentArtifact>pihemr</parentArtifact>
-        <parentVersion>2.0.0-SNAPSHOT</parentVersion>
+        <parentVersion>2.1.0-SNAPSHOT</parentVersion>
         <parentType>jar</parentType>
         <sdkVersion>6.1.0</sdkVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
