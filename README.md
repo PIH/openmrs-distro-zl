@@ -40,21 +40,23 @@ docker --version
 
 *Installing the ZL EMR with the OpenMRS SDK*
 
-To setup a new OpenMRS server running the ZL EMR, use setupSdk.sh, you will be prompted for the ports, database settings, and pih-config to use. For more information on available pih-config options, refer to the openmrs-config-zl project. The server will be installed to `~/openmrs/[serverId]`.
+To setup a new OpenMRS server running the ZL EMR, run setupSdk.sh, you will be prompted for the ports, database settings, and pih-config to use. For more information on available pih-config options, refer to the openmrs-config-zl project. The server will be installed to `~/openmrs/[serverId]`.
 
 ```
 ./setupSDK.sh
 ```
 
-To update your server using the OpenMRS SDK user the updateSdk.sh script. You will be prompted for the serverId to update.
+To update your server using the OpenMRS SDK run the updateSdk.sh script. You will be prompted for the serverId to update.
 
 ```
 ./updateSDK.sh
 ```
 
-*Installing the ZL EMR with the Docker*
+*Installing the ZL EMR with Docker*
 
-Container installations do not prompt for ports or pih.config like the OpenMRS SDK. Environment variables for the container-based installation are configured in the .env file. The setupDocker.sh script will create this file if it does not exist using defaults apropriate for a dev/test instance, with http on port 8080, debug on port 1044, and mysql on port 3306 with the pih.config "haiti,haiti-central,haiti-local-idgen". To adjust these settings, make a copy of `dev.env` named `.env` and make your changes before running setupDocker.sh. To setup a docker environment run setupDocker.sh. The script will create an environment file (if needed), install the distro files using maven (if needed), and copy the distro files to a local container image based on openmrs/openmrs-core.
+Container installations do not prompt for ports or pih.config like the OpenMRS SDK. Environment variables for the container-based installation are configured in the .env file. The setupDocker.sh script will create this file if it does not exist using defaults apropriate for a dev/test instance, with http on port 8080, debug on port 1044, and mysql on port 3306 with the pih.config "haiti,haiti-central,haiti-local-idgen". To adjust these settings, make a copy of `dev.env` named `.env` and make your changes before running setupDocker.sh. 
+
+To setup a docker environment run setupDocker.sh. The script will create an environment file (if needed), install the distro files using maven (if needed), and copy the distro files to a local container image based on openmrs/openmrs-core.
 
 ```
 ./setupDocker.sh
