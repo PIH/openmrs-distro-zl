@@ -6,3 +6,5 @@ target/
 /.idea
 *.iml
 .env
+compose.prod.yaml
+*.log

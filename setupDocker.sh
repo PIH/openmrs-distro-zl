@@ -11,5 +11,4 @@ if [ ! -d "$BUILD_DIR" ]; then
     echo "Build directory not found - running mvn clean install"
     mvn clean install
 fi
-docker compose down
-docker compose up --build
+docker compose up --build -d
