@@ -3,7 +3,7 @@
 
 ENV_FILE=.env
 if [ ! -f "$ENV_FILE" ]; then
-    echo "Environment file not found. Creating local .env from dev.env"
+    echo "Environment file not found. Creating local .env from default.env"
     cp default.env .env
 fi
 BUILD_DIR=./target/distro/web
