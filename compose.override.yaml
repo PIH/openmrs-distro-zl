@@ -4,7 +4,7 @@ services:
         file: compose.yaml
         service: openmrs
     environment:
-      DEBUG: ${TOMCAT_DEBUG:-"true"}
+      DEBUG: ${TOMCAT_DEBUG:-"false"}
     ports:
       - ${TOMCAT_DEBUG_PORT:-1044}:1044
 
