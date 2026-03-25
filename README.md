@@ -54,7 +54,7 @@ To update your server using the OpenMRS SDK run the updateSdk.sh script. You wil
 
 *Installing the ZL EMR with Docker*
 
-Container installations do not prompt for ports or pih.config like the OpenMRS SDK. Environment variables for the container-based installation are configured in the .env file. The setupDocker.sh script will create this file if it does not exist using defaults apropriate for a dev/test instance, with http on port 8080, debug on port 1044, and mysql on port 3306 with the pih.config "haiti,haiti-central,haiti-local-idgen". To adjust these settings, make a copy of `dev.env` named `.env` and make your changes before running setupDocker.sh. 
+Container installations do not prompt for ports or pih.config like the OpenMRS SDK. Environment variables for the container-based installation are configured in the .env file. The setupDocker.sh script will create this file if it does not exist using defaults.env, with http on port 8080, debug on port 1044, and mysql on port 3306 with the pih.config "haiti,haiti-central,haiti-local-idgen". To adjust these settings, make a copy of `defaults.env` named `.env` and make your changes before running setupDocker.sh. 
 
 To setup a docker environment run setupDocker.sh. The script will create an environment file (if needed), install the distro files using maven (if needed), and copy the distro files to a local container image based on openmrs/openmrs-core.
 
