@@ -15,17 +15,17 @@
     <properties>
         <contentGroup>org.pih.openmrs</contentGroup>
         <contentArtifact>zl-content</contentArtifact>
-        <contentVersion>1.76.0</contentVersion>
+        <contentVersion>1.77.0-SNAPSHOT</contentVersion>
         <contentType>zip</contentType>
         <frontendGroup>org.pih.openmrs</frontendGroup>
         <frontendArtifact>openmrs-frontend-pihemr</frontendArtifact>
-        <frontendVersion>1.34.0</frontendVersion>
+        <frontendVersion>1.35.0-SNAPSHOT</frontendVersion>
         <frontendType>zip</frontendType>
         <parentGroup>org.openmrs.distro</parentGroup>
         <parentArtifact>pihemr</parentArtifact>
         <parentVersion>2.2.0-SNAPSHOT</parentVersion>
         <parentType>jar</parentType>
-        <sdkVersion>6.8.0</sdkVersion>
+        <sdkVersion>6.9.0-SNAPSHOT</sdkVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
