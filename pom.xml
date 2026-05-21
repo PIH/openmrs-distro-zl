@@ -41,10 +41,23 @@
     </organization>
 
     <scm>
-        <connection>scm:git:git://github.com/PIH/openmrs-distro-zl.git</connection>
-        <developerConnection>scm:git:ssh://github.com:PIH/openmrs-distro-zl.git</developerConnection>
-        <url>https://github.com/PIH/openmrs-distro-zl</url>
+        <connection>scm:git:https://github.com/PIH/openmrs-distro-zl.git</connection>
+        <developerConnection>scm:git:https://github.com/PIH/openmrs-distro-zl.git</developerConnection>
+        <url>scm:git:https://github.com/PIH/openmrs-distro-zl.git</url>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>openmrs-repo-modules-pih</id>
+            <name>Modules</name>
+            <url>https://openmrs.jfrog.io/artifactory/modules-pih/</url>
+        </repository>
+        <snapshotRepository>
+            <id>openmrs-repo-modules-pih</id>
+            <name>OpenMRS Snapshots</name>
+            <url>https://openmrs.jfrog.io/artifactory/modules-pih-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <dependencies>
         <dependency>
