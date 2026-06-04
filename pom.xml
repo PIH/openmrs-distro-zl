@@ -15,11 +15,11 @@
     <properties>
         <contentGroup>org.pih.openmrs</contentGroup>
         <contentArtifact>zl-content</contentArtifact>
-        <contentVersion>1.77.0-SNAPSHOT</contentVersion>
+        <contentVersion>1.78.0-SNAPSHOT</contentVersion>
         <contentType>zip</contentType>
         <frontendGroup>org.pih.openmrs</frontendGroup>
         <frontendArtifact>openmrs-frontend-pihemr</frontendArtifact>
-        <frontendVersion>1.35.0-SNAPSHOT</frontendVersion>
+        <frontendVersion>1.36.0-SNAPSHOT</frontendVersion>
         <frontendType>zip</frontendType>
         <parentGroup>org.openmrs.distro</parentGroup>
         <parentArtifact>pihemr</parentArtifact>
