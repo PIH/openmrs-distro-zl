@@ -27,7 +27,6 @@ services:
       OMRS_CONFIG_CONNECTION_USERNAME: ${OPENMRS_DB_USER:-openmrs}
       OMRS_CONFIG_CONNECTION_PASSWORD: ${OPENMRS_DB_PASSWORD:-openmrs}
       OMRS_EXTRA_INITIALIZER_STARTUP_LOAD: 'disabled'
-      OMRS_EXTRA_DBEVENT__ENABLED: 'false'
       OMRS_EXTRA_ACTIVITYLOG__ENABLED: 'false'
       OMRS_EXTRA_PIH_CONFIG: ${PIH_CONFIG:-"haiti,haiti-central,haiti-local-idgen"}
       
